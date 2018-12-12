@@ -10,6 +10,22 @@
         <content type="html"><![CDATA[<h1 id="requests笔记："><a href="#requests笔记：" class="headerlink" title="requests笔记："></a>requests笔记：</h1><h2 id="发送get请求："><a href="#发送get请求：" class="headerlink" title="发送get请求："></a>发送get请求：</h2><p>发送get请求，直接调用<code>requests.get</code>就可以了。想要发送什么类型的请求，就调用什么方法。<br><figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><br><span class="hljs-comment"># params 接受一个字典或者字符串的查询参数，字典类型自动转换为url编码，不需要urlencode()</span><br><span class="hljs-comment"># response = requests.get("https://www.baidu.com/")</span><br><br><span class="hljs-comment"># print(type(response.text))</span><br><br><span class="hljs-comment"># 查看响应内容 response.text返回的是Unicode格式的参数</span><br><span class="hljs-comment"># print(response.text)</span><br><br><span class="hljs-comment"># 查看响应内容 response.content返回的字节流数据</span><br><span class="hljs-comment"># print(type(response.content))</span><br><br><span class="hljs-comment"># print(response.content.decode('utf-8'))</span><br><br><span class="hljs-comment"># 查看完整url地址</span><br><span class="hljs-comment"># print(response.url)</span><br><br><span class="hljs-comment"># 查看响应头部字符编码</span><br><span class="hljs-comment"># print(response.encoding)</span><br><br><span class="hljs-comment"># 查看响应码</span><br><span class="hljs-comment"># print(response.status_code)</span><br><br>params = &#123;<br>    <span class="hljs-string">'wd'</span>:<span class="hljs-string">'中国'</span><br>&#125;<br>headers = &#123;<br>    <span class="hljs-string">'User-Agent'</span>:<span class="hljs-string">'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'</span><br>&#125;<br>response = requests.get(<span class="hljs-string">"https://www.baidu.com/s"</span>,params=params,headers=headers)<br><br><span class="hljs-keyword">with</span> open(<span class="hljs-string">'baidu.html'</span>,<span class="hljs-string">'w'</span>,encoding=<span class="hljs-string">'utf-8'</span>) <span class="hljs-keyword">as</span> fp:<br>    fp.write(response.content.decode(<span class="hljs-string">'utf-8'</span>))<br>    print(response.url)<br></code></pre></td></tr></table></figure></p><h1 id="respones-text和response-content的区别："><a href="#respones-text和response-content的区别：" class="headerlink" title="respones.text和response.content的区别："></a>respones.text和response.content的区别：</h1><ol><li>respones.text: 这个是str的数据类型，是request库将response.content进行解码的字符串。解码需要指定一个编码方式，request会根据自己的猜测来判断编码方式，所以有时候可能会猜测错误，错误就会导致解码产生乱码。这时候就应该使用<code>response.content.decode(&#39;utf-8&#39;)</code>进行手动解码。</li><li>response.cnontent: 这个是直接从网络上面抓取的数据，没有经过任何解码。所以是一个bytes类型。其实在硬盘上和网络上传输的字符串都是bytes类型。<h2 id="response的一些属性："><a href="#response的一些属性：" class="headerlink" title="response的一些属性："></a>response的一些属性：</h2></li></ol><h2 id="发送post请求："><a href="#发送post请求：" class="headerlink" title="发送post请求："></a>发送post请求：</h2><p>发送post请求，直接调用<code>requests.post</code>方法就可以了。<br>如果返回的是json数据，那么可以调用<code>response.json()</code>来将json字符串转换为字典或者列表。</p><h2 id="使用代理："><a href="#使用代理：" class="headerlink" title="使用代理："></a>使用代理：</h2><p>在请求方法中，传递<code>proxies</code>参数就可以了。</p><h2 id="处理cookie："><a href="#处理cookie：" class="headerlink" title="处理cookie："></a>处理cookie：</h2><p>如果想要在多次请求中共享cookie，那么应该使用session,示例代码如下：<br><figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><br>url = <span class="hljs-string">"http://www.renren.com/PLogin.do"</span><br>data = &#123;<br>        <span class="hljs-string">'email'</span>: <span class="hljs-string">"账号"</span>,<br>        <span class="hljs-string">'password'</span>: <span class="hljs-string">"密码"</span><br>    &#125;<br><br>headers = &#123;<br>        <span class="hljs-string">'User-Agent'</span>: <span class="hljs-string">"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"</span><br>    &#125;<br><br>session = requests.Session()<br><br>session.post(url,data=data,headers=headers)<br><br>response = session.get(<span class="hljs-string">'http://www.renren.com/880151247/profile'</span>)<br><span class="hljs-keyword">with</span> open(<span class="hljs-string">'renren.html'</span>,<span class="hljs-string">'w'</span>,encoding=<span class="hljs-string">'utf-8'</span>) <span class="hljs-keyword">as</span> fp:<br>    fp.write(response.text)<br></code></pre></td></tr></table></figure></p><h2 id="处理没有授权的https协议："><a href="#处理没有授权的https协议：" class="headerlink" title="处理没有授权的https协议："></a>处理没有授权的https协议：</h2><p>对于那些已经被信任的SSL证书的网站，比如<code>https://www.baidu.com/</code>，那么使用<code>requests</code>直接就可以正常的返回响应。示例代码如下：<br><figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">resp = requests.get(<span class="hljs-string">'http://www.12306.cn/mormhweb'</span>,verify=flase)<br>print(resp.content.decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure></p>]]></content>
       
       
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 爬虫 </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -64,18 +80,18 @@
     </entry>
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
