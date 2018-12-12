@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-12T07:25:21.566Z</updated>
+  <updated>2018-12-12T07:28:44.094Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>requests</title>
+    <title>requests的使用</title>
     <link href="http://yoursite.com/2018/12/12/requests/"/>
     <id>http://yoursite.com/2018/12/12/requests/</id>
     <published>2018-12-12T05:55:31.000Z</published>
-    <updated>2018-12-12T07:25:21.566Z</updated>
+    <updated>2018-12-12T07:28:44.094Z</updated>
     
     <summary type="html">
     
@@ -69,11 +69,11 @@
   </entry>
   
   <entry>
-    <title>urllib</title>
+    <title>urllib的使用</title>
     <link href="http://yoursite.com/2018/12/11/urllib/"/>
     <id>http://yoursite.com/2018/12/11/urllib/</id>
     <published>2018-12-11T01:54:42.000Z</published>
-    <updated>2018-12-12T02:13:12.629Z</updated>
+    <updated>2018-12-12T07:28:39.075Z</updated>
     
     <summary type="html">
     
