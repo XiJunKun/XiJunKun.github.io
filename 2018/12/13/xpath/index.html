@@ -164,16 +164,17 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h1 id="xpath语法"><a href="#xpath语法" class="headerlink" title="xpath语法"></a>xpath语法</h1><h2 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h2><p>使用//获取整个页面当中的元素，然后写标签名，然后再写谓词进行提取。比如：<br><figure class="hljs highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">//div[@class='abc']<br></code></pre></td></tr></table></figure></p>
+      <h1 id="xpath语法"><a href="#xpath语法" class="headerlink" title="xpath语法"></a>xpath语法</h1><h2 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h2><p>使用//获取整个页面当中的元素，然后写标签名，然后再写谓词进行提取。比如：<br>    <figure class="hljs highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">//div[@class='abc']<br></code></pre></td></tr></table></figure></p>
 <h2 id="需要注意的是："><a href="#需要注意的是：" class="headerlink" title="需要注意的是："></a>需要注意的是：</h2><ol>
 <li><p>/和//的区别：/代表只获取直接子节点。//获取子孙节点。一般//用的比较多。当然也要视情况而定。</p>
 </li>
 <li><p>contains：有时候某个属性中包含了多个值，那么可以使用<code>contains</code>函数。示例代码如下：</p>
-<pre><code class="python">//div[contains(@class,&#39;job_detail&#39;)]
-</code></pre>
+<figure class="hljs highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">//div[contains(@class,'job_detail')]<br>``` <br><br>3. 谓词中的下标是从1开始的，不是从0开始的。<br><br>## 使用lxml解析HEML代码：<br>1. 解析html字符串：使用`lxml.etree.HTML`进行解析。示例代码如下：<br>	```python<br>		htmlElement = etree.HTML(text)<br>	    print(etree.tostring(htmlElement,encoding='utf-8').decode('utf-8'))<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>谓词中的下标是从1开始的，不是从0开始的。</p>
-</li>
+<li><p>解析html文件，使用<code>lxml.etree.parse</code>进行解析。示例代码如下：</p>
+ <figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">htmlElement = etree.parse(<span class="hljs-string">'tencent.html'</span>)<br>  	print(etree.tostring(htmlElement, encoding=<span class="hljs-string">'utf-8'</span>).decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure>
+<p> 这个函数默认使用的是<code>XML</code>解析器，所以如果碰到一些不规范的<code>HTML</code>代码的时候就会解析错误，这时候就要自己创建<code>HTML</code>解析器。</p>
+ <figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">parser = etree.HTMLParser(encoding=<span class="hljs-string">'utf-8'</span>)<br>  	htmlElement = etree.parse(<span class="hljs-string">'lagou.html'</span>,parser=parser)<br>  	print(etree.tostring(htmlElement, encoding=<span class="hljs-string">'utf-8'</span>).decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure></li>
 </ol>
 
     </main>
