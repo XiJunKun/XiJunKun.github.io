@@ -173,10 +173,11 @@
 </li>
 <li><p>解析html文件，使用<code>lxml.etree.parse</code>进行解析。示例代码如下：</p>
  <figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">htmlElement = etree.parse(<span class="hljs-string">'tencent.html'</span>)<br>   print(etree.tostring(htmlElement, encoding=<span class="hljs-string">'utf-8'</span>).decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure>
-<p> 这个函数默认使用的是<code>XML</code>解析器，所以如果碰到一些不规范的<code>HTML</code>代码的时候就会解析错误，这时候就要自己创建<code>HTML</code>解析器。</p>
- <figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">parser = etree.HTMLParser(encoding=<span class="hljs-string">'utf-8'</span>)<br>   htmlElement = etree.parse(<span class="hljs-string">'lagou.html'</span>,parser=parser)<br>   print(etree.tostring(htmlElement, encoding=<span class="hljs-string">'utf-8'</span>).decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure></li>
+</li>
 </ol>
-
+<p>这个函数默认使用的是<code>XML</code>解析器，所以如果碰到一些不规范的<code>HTML</code>代码的时候就会解析错误，这时候就要自己创建<code>HTML</code>解析器。</p>
+<pre><code><figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">parser = etree.HTMLParser(encoding=<span class="hljs-string">'utf-8'</span>)<br>   htmlElement = etree.parse(<span class="hljs-string">'lagou.html'</span>,parser=parser)<br>   print(etree.tostring(htmlElement, encoding=<span class="hljs-string">'utf-8'</span>).decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure>
+</code></pre>
     </main>
     <footer class="post-footer">
       
