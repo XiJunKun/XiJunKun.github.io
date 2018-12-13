@@ -169,7 +169,14 @@
 <li><p>/和//的区别：/代表只获取直接子节点。//获取子孙节点。一般//用的比较多。当然也要视情况而定。</p>
 </li>
 <li><p>contains：有时候某个属性中包含了多个值，那么可以使用<code>contains</code>函数。示例代码如下：</p>
-<figure class="hljs highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">//div[contains(@class,'job_detail')]<br>``` <br><br>3. 谓词中的下标是从1开始的，不是从0开始的。<br><br>## 使用lxml解析HEML代码：<br>1. 解析html字符串：使用`lxml.etree.HTML`进行解析。示例代码如下：<br>```python<br>htmlElement = etree.HTML(text)<br>print(etree.tostring(htmlElement,encoding='utf-8').decode('utf-8'))<br></code></pre></td></tr></table></figure>
+<figure class="hljs highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">//div[contains(@class,'job_detail')]<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>谓词中的下标是从1开始的，不是从0开始的。</p>
+</li>
+</ol>
+<h2 id="使用lxml解析HEML代码："><a href="#使用lxml解析HEML代码：" class="headerlink" title="使用lxml解析HEML代码："></a>使用lxml解析HEML代码：</h2><ol>
+<li><p>解析html字符串：使用<code>lxml.etree.HTML</code>进行解析。示例代码如下：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">htmlElement = etree.HTML(text)<br>print(etree.tostring(htmlElement,encoding=<span class="hljs-string">'utf-8'</span>).decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>解析html文件，使用<code>lxml.etree.parse</code>进行解析。示例代码如下：</p>
 <figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">htmlElement = etree.parse(<span class="hljs-string">'tencent.html'</span>)<br>   print(etree.tostring(htmlElement, encoding=<span class="hljs-string">'utf-8'</span>).decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure>
@@ -320,7 +327,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#xpath语法"><span class="toc-text">xpath语法</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#使用方式："><span class="toc-text">使用方式：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#需要注意的是："><span class="toc-text">需要注意的是：</span></a></li></ol></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#xpath语法"><span class="toc-text">xpath语法</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#使用方式："><span class="toc-text">使用方式：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#需要注意的是："><span class="toc-text">需要注意的是：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#使用lxml解析HEML代码："><span class="toc-text">使用lxml解析HEML代码：</span></a></li></ol></li></ol></div>
     </div>
     
     
