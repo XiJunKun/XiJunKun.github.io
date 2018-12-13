@@ -195,8 +195,9 @@
 <li><p>获取文本，是通过<code>xpath</code>中的<code>text()</code>函数。示例代码如下：</p>
 <figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">address = tr.xpath(<span class="hljs-string">"./td[4]/text()"</span>)[<span class="hljs-number">0</span>]<br></code></pre></td></tr></table></figure>
 </li>
+<li><p>在某个标签下，再执行xpath函数，获取这个标签下的子孙元素，那么应该在斜杠之前加一个点，代表是在当前元素下获取。示例代码如下：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">address = tr.xpath(<span class="hljs-string">"./td[4]/text()"</span>)[<span class="hljs-number">0</span>]<br></code></pre></td></tr></table></figure></li>
 </ol>
-<p>4.在某个标签下，再执行xpath函数，获取这个标签下的子孙元素，那么应该在斜杠之前加一个点，代表是在当前元素下获取。示例代码如下：<br><figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">address = tr.xpath(<span class="hljs-string">"./td[4]/text()"</span>)[<span class="hljs-number">0</span>]<br></code></pre></td></tr></table></figure></p>
 
     </main>
     <footer class="post-footer">
