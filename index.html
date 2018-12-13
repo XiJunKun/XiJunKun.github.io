@@ -168,7 +168,7 @@
     </header>
     <main class="post-main" itemprop="articleBody">
       
-      <h1 id="xpath语法"><a href="#xpath语法" class="headerlink" title="xpath语法"></a>xpath语法</h1><h2 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h2><p>使用//获取整个页面当中的元素，然后写标签名，然后再写谓词进行提取。比如：<br><figure class="hljs highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">//div[@class='abc']<br></code></pre></td></tr></table></figure></p>
+      <h1 id="xpath语法"><a href="#xpath语法" class="headerlink" title="xpath语法"></a>xpath语法</h1><h2 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h2><p>使用//获取整个页面当中的元素，然后写标签名，然后再写谓词进行提取。比如：<br><figure class="hljs highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><br>//div[@class='abc']<br></code></pre></td></tr></table></figure></p>
 <h2 id="需要注意的是："><a href="#需要注意的是：" class="headerlink" title="需要注意的是："></a>需要注意的是：</h2><ol>
 <li>/和//的区别：/代表只获取直接子节点。//获取子孙节点。一般//用的比较多。当然也要视情况而定。</li>
 <li>contains：有时候某个属性中包含了多个值，那么可以使用<code>contains</code>函数。示例代码如下：<pre><code class="python">//div[contains(@class,&#39;job_detail&#39;)]
