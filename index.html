@@ -132,6 +132,69 @@
   
   <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/13/xpath/">
+      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="熙军">
+        <meta itemprop="description" content="Knowledge makes humble, ignorance makes proud.">
+        <meta itemprop="image" content="/images/myavatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="熙军's Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/12/13/xpath/" itemprop="url">xpath</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-13T13:50:42+08:00">2018-12-13 13:50:42</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python-爬虫-笔记/" itemprop="url" rel="index"><span itemprop="name">python - 爬虫 - 笔记</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <h1 id="xpath语法"><a href="#xpath语法" class="headerlink" title="xpath语法"></a>xpath语法</h1><h2 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h2><p>使用//获取整个页面当中的元素，然后写标签名，然后再写谓词进行提取。比如：<br><figure class="hljs highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">//div[<span class="hljs-symbol">@class</span>=<span class="hljs-string">'abc'</span>]<br></code></pre></td></tr></table></figure></p>
+<h2 id="需要注意的是："><a href="#需要注意的是：" class="headerlink" title="需要注意的是："></a>需要注意的是：</h2><ol>
+<li>/和//的区别：/代表只获取直接子节点。//获取子孙节点。一般//用的比较多。当然也要视情况而定。</li>
+<li>contains：有时候某个属性中包含了多个值，那么可以使用<code>contains</code>函数。示例代码如下：<pre><code>//div[contains(@class,&apos;job_detail&apos;)]
+</code></pre></li>
+<li>谓词中的下标是从1开始的，不是从0开始的。</li>
+</ol>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/python/" rel="tag"><i class="fas fa-tags"></i>python</a>
+        
+        <a class="post-tag button" href="/tags/爬虫/" rel="tag"><i class="fas fa-tags"></i>爬虫</a>
+        
+        <a class="post-tag button" href="/tags/笔记/" rel="tag"><i class="fas fa-tags"></i>笔记</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/12/requests/">
       <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
         <meta itemprop="name" content="熙军">
@@ -158,7 +221,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python-爬虫-笔记/" itemprop="url" rel="index"><span itemprop="name">python - 爬虫 - 笔记</span></a></span>
         </span>
         
         
@@ -223,7 +286,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python-爬虫-笔记/" itemprop="url" rel="index"><span itemprop="name">python - 爬虫 - 笔记</span></a></span>
         </span>
         
         
@@ -349,7 +412,7 @@
     
     <div class="archives-count">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">3</a></div>
+      <div><a href="/archives/">4</a></div>
     </div>
     
     

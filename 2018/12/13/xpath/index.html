@@ -83,7 +83,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>分类: python | 熙军's Blog - Whisper to the World</title>
+    <title>xpath | 熙军's Blog - Whisper to the World</title>
   </head>
   <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -127,35 +127,128 @@
         <div class="main-container">
           <div class="content">
             
-<div id="category" class="category page">
-  <h1 class="page-title">python</h1>
+<div id="post" class="page">
   
   <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/12/12/requests/" itemprop="url">requests</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-12T13:55:31+08:00">12-12</time>
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/13/xpath/">
+      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="熙军">
+       <meta itemprop="description" content="Knowledge makes humble, ignorance makes proud.">
+       <meta itemprop="image" content="/images/myavatar.png">
       </span>
-      
+      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="熙军's Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">xpath</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-13T13:50:42+08:00">2018-12-13 13:50:42</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python-爬虫-笔记/" itemprop="url" rel="index"><span itemprop="name">python - 爬虫 - 笔记</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
     </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="xpath语法"><a href="#xpath语法" class="headerlink" title="xpath语法"></a>xpath语法</h1><h2 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h2><p>使用//获取整个页面当中的元素，然后写标签名，然后再写谓词进行提取。比如：<br><figure class="hljs highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">//div[<span class="hljs-symbol">@class</span>=<span class="hljs-string">'abc'</span>]<br></code></pre></td></tr></table></figure></p>
+<h2 id="需要注意的是："><a href="#需要注意的是：" class="headerlink" title="需要注意的是："></a>需要注意的是：</h2><ol>
+<li>/和//的区别：/代表只获取直接子节点。//获取子孙节点。一般//用的比较多。当然也要视情况而定。</li>
+<li>contains：有时候某个属性中包含了多个值，那么可以使用<code>contains</code>函数。示例代码如下：<pre><code>//div[contains(@class,&apos;job_detail&apos;)]
+</code></pre></li>
+<li>谓词中的下标是从1开始的，不是从0开始的。</li>
+</ol>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/python/" rel="tag"><i class="fas fa-tags"></i>python</a>
+        
+        <a class="post-tag button" href="/tags/爬虫/" rel="tag"><i class="fas fa-tags"></i>爬虫</a>
+        
+        <a class="post-tag button" href="/tags/笔记/" rel="tag"><i class="fas fa-tags"></i>笔记</a>
+        
+      </div>
+      
+    </footer>
   </article>
   
-  <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/12/11/urllib/" itemprop="url">urllib</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-11T09:54:42+08:00">12-11</time>
-      </span>
-      
-    </header>
-  </article>
   
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2018/12/12/requests/" rel="next" title="requests"><i class="fas fa-angle-left"></i><span class="nav-title">requests</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="/css/commentjs.css">
+  <script defer type="text/javascript" src="/js/marked.min.js"></script>
+  <script defer type="text/javascript" src="/js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="/js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="/js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "XiJunKun",
+      "repo": "comment.js",
+      "client_id": "e915ba871bb8ce5222dc",
+      "client_secret": "d01fdda69c2e923e8ea2b805b6d1dbcbfa08ea27",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "xpath",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
   
 </div>
 
@@ -183,7 +276,7 @@
     
     <div class="archives-count">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">3</a></div>
+      <div><a href="/archives/">4</a></div>
     </div>
     
     
@@ -214,6 +307,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#xpath语法"><span class="toc-text">xpath语法</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#使用方式："><span class="toc-text">使用方式：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#需要注意的是："><span class="toc-text">需要注意的是：</span></a></li></ol></li></ol></div>
+    </div>
+    
     
     
     <hr>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-12T07:32:12.003Z</updated>
+  <updated>2018-12-13T05:56:55.105Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>xpath</title>
+    <link href="http://yoursite.com/2018/12/13/xpath/"/>
+    <id>http://yoursite.com/2018/12/13/xpath/</id>
+    <published>2018-12-13T05:50:42.000Z</published>
+    <updated>2018-12-13T05:56:55.105Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;xpath语法&quot;&gt;&lt;a href=&quot;#xpath语法&quot; class=&quot;headerlink&quot; title=&quot;xpath语法&quot;&gt;&lt;/a&gt;xpath语法&lt;/h1&gt;&lt;h2 id=&quot;使用方式：&quot;&gt;&lt;a href=&quot;#使用方式：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="python - 爬虫 - 笔记" scheme="http://yoursite.com/categories/python-%E7%88%AC%E8%99%AB-%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>requests</title>
     <link href="http://yoursite.com/2018/12/12/requests/"/>
     <id>http://yoursite.com/2018/12/12/requests/</id>
     <published>2018-12-12T05:55:31.000Z</published>
-    <updated>2018-12-12T07:32:12.003Z</updated>
+    <updated>2018-12-13T05:57:12.605Z</updated>
     
     <summary type="html">
     
@@ -35,7 +65,7 @@
     
     </summary>
     
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+      <category term="python - 爬虫 - 笔记" scheme="http://yoursite.com/categories/python-%E7%88%AC%E8%99%AB-%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
@@ -51,7 +81,7 @@
     <link href="http://yoursite.com/2018/12/11/urllib/"/>
     <id>http://yoursite.com/2018/12/11/urllib/</id>
     <published>2018-12-11T01:54:42.000Z</published>
-    <updated>2018-12-12T07:32:09.859Z</updated>
+    <updated>2018-12-13T05:57:17.141Z</updated>
     
     <summary type="html">
     
@@ -65,7 +95,7 @@
     
     </summary>
     
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+      <category term="python - 爬虫 - 笔记" scheme="http://yoursite.com/categories/python-%E7%88%AC%E8%99%AB-%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
