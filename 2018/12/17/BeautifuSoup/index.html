@@ -83,7 +83,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>标签: python | 熙军's Blog - Whisper to the World</title>
+    <title>BeautifuSoup | 熙军's Blog - Whisper to the World</title>
   </head>
   <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -127,61 +127,147 @@
         <div class="main-container">
           <div class="content">
             
-<div id="tag" class="tag page">
-  <h1 class="page-title">python</h1>
+<div id="post" class="page">
   
   <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/12/17/BeautifuSoup/" itemprop="url">BeautifuSoup</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-17T16:15:23+08:00">12-17</time>
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/17/BeautifuSoup/">
+      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="熙军">
+       <meta itemprop="description" content="Knowledge makes humble, ignorance makes proud.">
+       <meta itemprop="image" content="/images/myavatar.png">
       </span>
-      
+      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="熙军's Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">BeautifuSoup</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-17T16:15:23+08:00">2018-12-17 16:15:23</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/爬虫/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/爬虫/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
     </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="BeautifuSoup笔记"><a href="#BeautifuSoup笔记" class="headerlink" title="BeautifuSoup笔记"></a>BeautifuSoup笔记</h1><h2 id="find-all的使用："><a href="#find-all的使用：" class="headerlink" title="find_all的使用："></a>find_all的使用：</h2><ol>
+<li>在提取标签的时候第一个参数是标签的名字。然后如果再提取标签的时候想要使用标签属性进行过滤，那么可以再这个方法中通过关键字参数的形式，将属性的名字以及对应的值传进去，或者是使用<code>attrs</code>属性，将所有的属性以及对应的值放在一个字典中传给<code>attrs</code>属性。</li>
+<li>有些时候，在提取标签时不想提取那么多，那么可以使用<code>limit</code>参数。限制提取多少个。</li>
+</ol>
+<h2 id="find与find-all的区别："><a href="#find与find-all的区别：" class="headerlink" title="find与find_all的区别："></a>find与find_all的区别：</h2><ol>
+<li>find：找到第一个满足的标签就返回了，也就是只会返回一个元素。</li>
+<li>find_all：将所有满足条件的标签都返回（以列表的形式）。</li>
+</ol>
+<h2 id="使用find和find-all的过滤条件："><a href="#使用find和find-all的过滤条件：" class="headerlink" title="使用find和find_all的过滤条件："></a>使用find和find_all的过滤条件：</h2><ol>
+<li>关键字参数：将属性的名字作为关键字参数的名字，以及属性的值作为关键字参数的值进行过滤。</li>
+<li>attrs参数：将属性条件放到一个字典中，传给attrs参数。</li>
+</ol>
+<h2 id="获取标签的属性："><a href="#获取标签的属性：" class="headerlink" title="获取标签的属性："></a>获取标签的属性：</h2><ol>
+<li><p>通过下标获取：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">href = a[<span class="hljs-string">'href'</span>]<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>通过attrs属性获取：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">href = a.attrs[<span class="hljs-string">'href'</span>]<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="strings和stripped-strings属性以及get-text方法："><a href="#strings和stripped-strings属性以及get-text方法：" class="headerlink" title="strings和stripped_strings属性以及get_text方法："></a>strings和stripped_strings属性以及get_text方法：</h2><ol>
+<li>string：获取某个标签下的非标签字符串（返回的是个字符串）。</li>
+<li>strings：获取某个标签下的子孙非标签字符串（返回的是个生成器）。</li>
+<li>stripped_strings：获取某个标签下的子孙非标签字符串，会去掉空白字符（返回的是个生成器）。</li>
+<li>get_text：获取某个标签下的子孙非标签字符串（不是以列表的形式返回，是以普通字符串返回）。</li>
+</ol>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/python/" rel="tag"><i class="fas fa-tags"></i>python</a>
+        
+        <a class="post-tag button" href="/tags/爬虫/" rel="tag"><i class="fas fa-tags"></i>爬虫</a>
+        
+        <a class="post-tag button" href="/tags/笔记/" rel="tag"><i class="fas fa-tags"></i>笔记</a>
+        
+      </div>
+      
+    </footer>
   </article>
   
-  <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/12/13/xpath/" itemprop="url">xpath</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-13T13:50:42+08:00">12-13</time>
-      </span>
-      
-    </header>
-  </article>
   
-  <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/12/12/requests/" itemprop="url">requests</a>
-      </h1>
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
       
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-12T13:55:31+08:00">12-12</time>
-      </span>
+      <a href="/2018/12/13/xpath/" rel="next" title="xpath"><i class="fas fa-angle-left"></i><span class="nav-title">xpath</span></a>
       
-    </header>
-  </article>
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
   
-  <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/12/11/urllib/" itemprop="url">urllib</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-11T09:54:42+08:00">12-11</time>
-      </span>
-      
-    </header>
-  </article>
   
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="/css/commentjs.css">
+  <script defer type="text/javascript" src="/js/marked.min.js"></script>
+  <script defer type="text/javascript" src="/js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="/js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="/js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "XiJunKun",
+      "repo": "comment.js",
+      "client_id": "e915ba871bb8ce5222dc",
+      "client_secret": "d01fdda69c2e923e8ea2b805b6d1dbcbfa08ea27",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "BeautifuSoup",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
   
 </div>
 
@@ -240,6 +326,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#BeautifuSoup笔记"><span class="toc-text">BeautifuSoup笔记</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#find-all的使用："><span class="toc-text">find_all的使用：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#find与find-all的区别："><span class="toc-text">find与find_all的区别：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#使用find和find-all的过滤条件："><span class="toc-text">使用find和find_all的过滤条件：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#获取标签的属性："><span class="toc-text">获取标签的属性：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#strings和stripped-strings属性以及get-text方法："><span class="toc-text">strings和stripped_strings属性以及get_text方法：</span></a></li></ol></li></ol></div>
+    </div>
+    
     
     
     <hr>

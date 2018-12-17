@@ -3,6 +3,37 @@
   
     
     <entry>
+      <title>BeautifuSoup</title>
+      <link href="/2018/12/17/BeautifuSoup/"/>
+      <url>/2018/12/17/BeautifuSoup/</url>
+      
+        <content type="html"><![CDATA[<h1 id="BeautifuSoup笔记"><a href="#BeautifuSoup笔记" class="headerlink" title="BeautifuSoup笔记"></a>BeautifuSoup笔记</h1><h2 id="find-all的使用："><a href="#find-all的使用：" class="headerlink" title="find_all的使用："></a>find_all的使用：</h2><ol><li>在提取标签的时候第一个参数是标签的名字。然后如果再提取标签的时候想要使用标签属性进行过滤，那么可以再这个方法中通过关键字参数的形式，将属性的名字以及对应的值传进去，或者是使用<code>attrs</code>属性，将所有的属性以及对应的值放在一个字典中传给<code>attrs</code>属性。</li><li>有些时候，在提取标签时不想提取那么多，那么可以使用<code>limit</code>参数。限制提取多少个。</li></ol><h2 id="find与find-all的区别："><a href="#find与find-all的区别：" class="headerlink" title="find与find_all的区别："></a>find与find_all的区别：</h2><ol><li>find：找到第一个满足的标签就返回了，也就是只会返回一个元素。</li><li>find_all：将所有满足条件的标签都返回（以列表的形式）。</li></ol><h2 id="使用find和find-all的过滤条件："><a href="#使用find和find-all的过滤条件：" class="headerlink" title="使用find和find_all的过滤条件："></a>使用find和find_all的过滤条件：</h2><ol><li>关键字参数：将属性的名字作为关键字参数的名字，以及属性的值作为关键字参数的值进行过滤。</li><li>attrs参数：将属性条件放到一个字典中，传给attrs参数。</li></ol><h2 id="获取标签的属性："><a href="#获取标签的属性：" class="headerlink" title="获取标签的属性："></a>获取标签的属性：</h2><ol><li><p>通过下标获取：</p><figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">href = a[<span class="hljs-string">'href'</span>]<br></code></pre></td></tr></table></figure></li><li><p>通过attrs属性获取：</p><figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">href = a.attrs[<span class="hljs-string">'href'</span>]<br></code></pre></td></tr></table></figure></li></ol><h2 id="strings和stripped-strings属性以及get-text方法："><a href="#strings和stripped-strings属性以及get-text方法：" class="headerlink" title="strings和stripped_strings属性以及get_text方法："></a>strings和stripped_strings属性以及get_text方法：</h2><ol><li>string：获取某个标签下的非标签字符串（返回的是个字符串）。</li><li>strings：获取某个标签下的子孙非标签字符串（返回的是个生成器）。</li><li>stripped_strings：获取某个标签下的子孙非标签字符串，会去掉空白字符（返回的是个生成器）。</li><li>get_text：获取某个标签下的子孙非标签字符串（不是以列表的形式返回，是以普通字符串返回）。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+          <category> 爬虫 </category>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 爬虫 </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>xpath</title>
       <link href="/2018/12/13/xpath/"/>
       <url>/2018/12/13/xpath/</url>

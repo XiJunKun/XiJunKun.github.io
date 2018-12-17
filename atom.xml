@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-13T15:48:45.794Z</updated>
+  <updated>2018-12-17T08:42:18.647Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>BeautifuSoup</title>
+    <link href="http://yoursite.com/2018/12/17/BeautifuSoup/"/>
+    <id>http://yoursite.com/2018/12/17/BeautifuSoup/</id>
+    <published>2018-12-17T08:15:23.000Z</published>
+    <updated>2018-12-17T08:42:18.647Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;BeautifuSoup笔记&quot;&gt;&lt;a href=&quot;#BeautifuSoup笔记&quot; class=&quot;headerlink&quot; title=&quot;BeautifuSoup笔记&quot;&gt;&lt;/a&gt;BeautifuSoup笔记&lt;/h1&gt;&lt;h2 id=&quot;find-all的使用：&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="爬虫" scheme="http://yoursite.com/categories/python/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="笔记" scheme="http://yoursite.com/categories/python/%E7%88%AC%E8%99%AB/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>xpath</title>
     <link href="http://yoursite.com/2018/12/13/xpath/"/>
     <id>http://yoursite.com/2018/12/13/xpath/</id>
     <published>2018-12-13T05:50:42.000Z</published>
-    <updated>2018-12-13T15:48:45.794Z</updated>
+    <updated>2018-12-17T08:14:17.871Z</updated>
     
     <summary type="html">
     
