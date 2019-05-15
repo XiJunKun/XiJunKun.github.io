@@ -83,7 +83,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>urllib | 熙军's Blog - Whisper to the World</title>
+    <title>分类: LNMP | 熙军's Blog - Whisper to the World</title>
   </head>
   <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -127,136 +127,22 @@
         <div class="main-container">
           <div class="content">
             
-<div id="post" class="page">
+<div id="category" class="category page">
+  <h1 class="page-title">LNMP</h1>
   
   <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/11/urllib/">
-      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-       <meta itemprop="name" content="熙军">
-       <meta itemprop="description" content="Knowledge makes humble, ignorance makes proud.">
-       <meta itemprop="image" content="/images/myavatar.png">
+    <header id="post-header" class="post-header">
+      <h1 class="post-title-simple" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2019/05/13/SSL/" itemprop="url">阿里云服务器SSL证书</a>
+      </h1>
+      
+      <span class="post-date">
+        <time title="post-date" itemprop="dateCreated datePublished" datetime="2019-05-13T17:15:23+08:00">05-13</time>
       </span>
-      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-       <meta itemprop="name" content="熙军's Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">urllib</h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-11T09:54:42+08:00">2018-12-11 09:54:42</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/爬虫/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/爬虫/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
-        </span>
-        
-        
-        
-        
-      </div>
+      
     </header>
-    <main class="post-main" itemprop="articleBody">
-      <h3 id="ProxyHandler处理器（代理）："><a href="#ProxyHandler处理器（代理）：" class="headerlink" title="ProxyHandler处理器（代理）："></a>ProxyHandler处理器（代理）：</h3><ol>
-<li><p>代理的原理：在请求木的网站之前，先请求代理服务器，然后让代理服务器去请求目的网站，代理服务器拿到目的网站的数据后，再转发给我们的代码。</p>
-</li>
-<li><p><a href="http://httpbin.org" target="_blank" rel="noopener">http://httpbin.org</a>：这个网站可以方便的查看http请求的一些参数。</p>
-</li>
-<li><p>在代码中使用代理：</p>
-<ul>
-<li>使用<code>urllib.request.ProxyHandler</code>，传入一个代理，这个代理是一个字典，字典的key依赖于代理服务器能够接收的类型，一般是<code>http</code>或者<code>https</code>,值是<code>ip:port</code>。</li>
-<li>使用上一步创建的<code>handler</code>，以及<code>request.build_opener</code>创建一个<code>opener</code>对象。</li>
-<li>使用上一部创建的<code>opener</code>，调用<code>open</code>函数，发起请求。<br>示例代码如下：<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> urllib.request<br>url = <span class="hljs-string">'http://httpbin.org/ip'</span><br><span class="hljs-comment"># 1.使用ProxyNandler，传入代理构建一个handler</span><br>handler = urllib.request.ProxyHandler(&#123;<span class="hljs-string">"http"</span>:<span class="hljs-string">"163.125.232.20:8118"</span>&#125;)<br><span class="hljs-comment"># 2.使用上面创建的handler构建一个opener</span><br>opener = urllib.request.build_opener(handler)<br><span class="hljs-comment"># 3.使用opener去发送一个请求</span><br>resp = opener.open(url)<br>print(resp.read())<br></code></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/笔记/" rel="tag"><i class="fas fa-tags"></i>笔记</a>
-        
-        <a class="post-tag button" href="/tags/python/" rel="tag"><i class="fas fa-tags"></i>python</a>
-        
-        <a class="post-tag button" href="/tags/爬虫/" rel="tag"><i class="fas fa-tags"></i>爬虫</a>
-        
-      </div>
-      
-    </footer>
   </article>
   
-  
-  <nav class="page-nav">
-    <div class="page-nav-next page-nav-item">
-      
-      <a href="/2018/12/09/hello-world/" rel="next" title="Hello World"><i class="fas fa-angle-left"></i><span class="nav-title">Hello World</span></a>
-      
-    </div>
-    <div class="page-nav-prev page-nav-item">
-      
-      <a href="/2018/12/12/requests/" rel="prev" title="requests"><span class="nav-title">requests</span><i class="fas fa-angle-right"></i></a>
-      
-    </div>
-  </nav>
-  
-  
-  
-
-<div class="comments" id="comments">
-  
-  
-  <div class="commentjs" id="comment-thread"></div>
-  <link rel="stylesheet" href="/css/commentjs.css">
-  <script defer type="text/javascript" src="/js/marked.min.js"></script>
-  <script defer type="text/javascript" src="/js/timeago.min.js"></script>
-  <script defer type="text/javascript" src="/js/highlight.min.js"></script>
-  <script defer type="text/javascript" src="/js/commentjs.js"></script>
-  <script type="text/javascript">
-  $(document).ready(function () {
-    getComments({
-      "type": "github",
-      "user": "XiJunKun",
-      "repo": "comment.js",
-      "client_id": "e915ba871bb8ce5222dc",
-      "client_secret": "d01fdda69c2e923e8ea2b805b6d1dbcbfa08ea27",
-      "no_comment": "这个页面还没有评论，现在就去评论吧！",
-      "go_to_comment": "去评论",
-      "issue_title": "urllib",
-      "btn_class": "button",
-      "comments_target": "#comment-thread"
-    });
-    marked.setOptions({
-      "highlight": function (code, lang) {
-        return hljs.highlightAuto(code).value;
-      }
-    });
-    function mark() {
-      var markdowns = document.getElementsByClassName("markdown");
-      for (var i = 0; i < markdowns.length; ++i){
-        if (markdowns[i].innerHTML) {
-          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
-        }
-      }
-    }
-    window.addEventListener("DOMContentLoaded", mark, false);
-    window.addEventListener("load", mark, false);
-  });
-  </script>
-  
-  
-</div>
-
-
-
   
 </div>
 
@@ -315,17 +201,6 @@
 
 
   <div class="sidebar-sticky">
-    
-    
-    
-    
-    
-    <hr>
-    <div class="post-toc sidebar-item" id="toc-div">
-      <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#ProxyHandler处理器（代理）："><span class="toc-text">ProxyHandler处理器（代理）：</span></a></li></ol></div>
-    </div>
-    
     
     
     <hr>

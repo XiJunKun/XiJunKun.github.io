@@ -83,7 +83,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>xpath | 熙军's Blog - Whisper to the World</title>
+    <title>阿里云服务器SSL证书 | 熙军's Blog - Whisper to the World</title>
   </head>
   <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -131,7 +131,7 @@
   
   <article class="article post card" itemscope="" itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/13/xpath/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/13/SSL/">
       <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
        <meta itemprop="name" content="熙军">
        <meta itemprop="description" content="Knowledge makes humble, ignorance makes proud.">
@@ -142,11 +142,11 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">xpath</h1>
+      <h1 class="post-title" itemprop="name headline">阿里云服务器SSL证书</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-12-13T13:50:42+08:00">2018-12-13 13:50:42</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-05-13T17:15:23+08:00">2019-05-13 17:15:23</time></span>
         </span>
         
         
@@ -155,7 +155,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/爬虫/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/爬虫/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/服务器/" itemprop="url" rel="index"><span itemprop="name">服务器</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/服务器/LNMP/" itemprop="url" rel="index"><span itemprop="name">LNMP</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/服务器/LNMP/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
         </span>
         
         
@@ -164,51 +164,34 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h1 id="xpath语法"><a href="#xpath语法" class="headerlink" title="xpath语法"></a>xpath语法</h1><h2 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h2><p>使用//获取整个页面当中的元素，然后写标签名，然后再写谓词进行提取。比如：<br><figure class="hljs highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">//div[@class='abc']<br></code></pre></td></tr></table></figure></p>
-<h2 id="需要注意的是："><a href="#需要注意的是：" class="headerlink" title="需要注意的是："></a>需要注意的是：</h2><ol>
-<li><p>/和//的区别：/代表只获取直接子节点。//获取子孙节点。一般//用的比较多。当然也要视情况而定。</p>
+      <h1 id="阿里云LNMP服务器SSL证书"><a href="#阿里云LNMP服务器SSL证书" class="headerlink" title="阿里云LNMP服务器SSL证书"></a>阿里云LNMP服务器SSL证书</h1><h2 id="SSL证书的使用："><a href="#SSL证书的使用：" class="headerlink" title="SSL证书的使用："></a>SSL证书的使用：</h2><p>在证书控制台下载Nginx版本证书。下载到本地的压缩文件包解压后包含：</p>
+<ol>
+<li>.crt文件：是证书文件，crt是pem文件的扩展名。</li>
+<li>.key文件：证书的私钥文件（申请证书时如果没有选择自动创建CSR，则没有该文件）。</li>
+<li>在Nginx的安装目录下创建cert目录，并且将下载的全部文件拷贝到cert目录中。如果申请证书时是自己创建的CSR文件，请将对应的私钥文件放到cert目录下并且命名为a.key；</li>
+<li>例如我的Nginx安装目录是在/ect目录下，那么就在/etc/nginx/目录下创建cert文件夹。</li>
+</ol>
+<h2 id="Nginx配置："><a href="#Nginx配置：" class="headerlink" title="Nginx配置："></a>Nginx配置：</h2><ol>
+<li>打开 Nginx 安装目录下 conf.d 目录中的 conf 文件。</li>
+<li><p>这是我的配置文件，请根据自己的情况进行修改。</p>
+<figure class="hljs highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs php">server &#123;<br>listen <span class="hljs-number">80</span>;<br>server_name www.xxx.com xxx.com; <span class="hljs-comment">#域名自行修改</span><br>rewrite ^/(.*) https:<span class="hljs-comment">//www.xxx.com/$1 permanent; #域名自行修改</span><br>&#125;<br><br>server &#123;<br>    listen       <span class="hljs-number">80</span>;<br>    listen     <span class="hljs-number">443</span>;<br><br>    server_name  www.xxx.com xxx.com;<br><br>    <span class="hljs-comment">#charset koi8-r;</span><br>    <span class="hljs-comment">#access_log  /var/log/nginx/host.access.log  main;</span><br><br>    ssl on;    <span class="hljs-comment">#开启ssl支持</span><br>    <br>    ssl_certificate      /etc/nginx/cert/a.pem;    <span class="hljs-comment">#指定服务器证书路径</span><br>    <br>    ssl_certificate_key  /etc/nginx/cert/a.key;    <span class="hljs-comment">#指定私钥证书路径</span><br>    <br>    ssl_session_cache    shared:SSL:<span class="hljs-number">10</span>m; <span class="hljs-comment">#SSL会话缓存10MB</span><br>    <br>    ssl_session_timeout  <span class="hljs-number">10</span>m; <span class="hljs-comment">#SSL会话超时间10分钟</span><br>    <br>    ssl_protocols SSLv2 SSLv3 TLSv1 TLSv1<span class="hljs-number">.1</span> TLSv1<span class="hljs-number">.2</span>;     <span class="hljs-comment">#指定SSL服务器端支持的协议版本</span><br>    <br>    ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;    <span class="hljs-comment">#指定加密算法</span><br>    <br>    ssl_prefer_server_ciphers   on;    <span class="hljs-comment">#在使用SSLv3和TLS协议时指定服务器的加密算法要优先于客户端的加密算法</span><br><br>    location / &#123;<br>        root   /home/<span class="hljs-keyword">public</span>/tp5/<span class="hljs-keyword">public</span>;    <span class="hljs-comment">#自己的项目目录</span><br>        index  index.html index.htm index.php;<br><span class="hljs-keyword">if</span> (!-e $request_filename) &#123;<br>        rewrite ^(.*)$ /index.php?s=/$<span class="hljs-number">1</span> last;<br>        <span class="hljs-keyword">break</span>;<br>      &#125;<br>    &#125;<br><br>    <span class="hljs-comment">#error_page  404              /404.html;</span><br><br>    <span class="hljs-comment"># redirect server error pages to the static page /50x.html</span><br>    <span class="hljs-comment">#</span><br>    error_page   <span class="hljs-number">500</span> <span class="hljs-number">502</span> <span class="hljs-number">503</span> <span class="hljs-number">504</span>  /<span class="hljs-number">50</span>x.html;<br>    location = /<span class="hljs-number">50</span>x.html &#123;<br>        root   /usr/share/nginx/html;<br>    &#125;<br><br>    <span class="hljs-comment"># proxy the PHP scripts to Apache listening on 127.0.0.1:80</span><br>    <span class="hljs-comment">#</span><br>    <span class="hljs-comment">#location ~ \.php$ &#123;</span><br>    <span class="hljs-comment">#    proxy_pass   http://127.0.0.1;</span><br>    <span class="hljs-comment">#&#125;</span><br><br>    <span class="hljs-comment"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span><br>    <span class="hljs-comment">#</span><br>    location ~ \.php$ &#123;<br>        root           /home/<span class="hljs-keyword">public</span>;<br>        fastcgi_pass   <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">9000</span>;<br>        fastcgi_index  index.php;<br>        fastcgi_param  SCRIPT_FILENAME   /home/<span class="hljs-keyword">public</span>/tp5/<span class="hljs-keyword">public</span>$fastcgi_script_name;<br>        <span class="hljs-keyword">include</span>        fastcgi_params;<br>    &#125;<br><br>    <span class="hljs-comment"># deny access to .htaccess files, if Apache's document root</span><br>    <span class="hljs-comment"># concurs with nginx's one</span><br>    <span class="hljs-comment">#</span><br>    <span class="hljs-comment">#location ~ /\.ht &#123;</span><br>    <span class="hljs-comment">#    deny  all;</span><br>    <span class="hljs-comment">#&#125;</span><br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>contains：有时候某个属性中包含了多个值，那么可以使用<code>contains</code>函数。示例代码如下：</p>
-<figure class="hljs highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">//div[contains(@class,'job_detail')]<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>谓词中的下标是从1开始的，不是从0开始的。</p>
+<li><p>完成后重启Nginx服务器</p>
+<figure class="hljs highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">service nginx reload;<br></code></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="使用lxml解析HEML代码："><a href="#使用lxml解析HEML代码：" class="headerlink" title="使用lxml解析HEML代码："></a>使用lxml解析HEML代码：</h2><ol>
-<li><p>解析html字符串：使用<code>lxml.etree.HTML</code>进行解析。示例代码如下：</p>
-<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">htmlElement = etree.HTML(text)<br>print(etree.tostring(htmlElement,encoding=<span class="hljs-string">'utf-8'</span>).decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>解析html文件，使用<code>lxml.etree.parse</code>进行解析。示例代码如下：</p>
-<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">htmlElement = etree.parse(<span class="hljs-string">'tencent.html'</span>)<br>print(etree.tostring(htmlElement, encoding=<span class="hljs-string">'utf-8'</span>).decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>这个函数默认使用的是<code>XML</code>解析器，所以如果碰到一些不规范的<code>HTML</code>代码的时候就会解析错误，这时候就要自己创建<code>HTML</code>解析器。<br><figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">parser = etree.HTMLParser(encoding=<span class="hljs-string">'utf-8'</span>)<br>htmlElement = etree.parse(<span class="hljs-string">'lagou.html'</span>,parser=parser)<br>print(etree.tostring(htmlElement, encoding=<span class="hljs-string">'utf-8'</span>).decode(<span class="hljs-string">'utf-8'</span>))<br></code></pre></td></tr></table></figure></p>
-<h2 id="lxml结合xpath注意事项："><a href="#lxml结合xpath注意事项：" class="headerlink" title="lxml结合xpath注意事项："></a>lxml结合xpath注意事项：</h2><ol>
-<li>使用<code>xpath</code>语法，应该使用<code>Element.xpath</code>方法，来执行xpath的选择，示例代码如下：<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">trs = html.xpath(<span class="hljs-string">"//tr[position()&gt;1]"</span>)<br></code></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><code>xpath</code>函数返回的永远是一个列表。</p>
-<ol start="2">
-<li><p>获取某个标签的属性：</p>
-<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">html.xpath(<span class="hljs-string">"//a/@href"</span>)<br><span class="hljs-comment"># 获取a标签的href属性对应的值</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>获取文本，是通过<code>xpath</code>中的<code>text()</code>函数。示例代码如下：</p>
-<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">address = tr.xpath(<span class="hljs-string">"./td[4]/text()"</span>)[<span class="hljs-number">0</span>]<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>在某个标签下，再执行xpath函数，获取这个标签下的子孙元素，那么应该在斜杠之前加一个点，代表是在当前元素下获取。示例代码如下：</p>
-<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">address = tr.xpath(<span class="hljs-string">"./td[4]/text()"</span>)[<span class="hljs-number">0</span>]<br></code></pre></td></tr></table></figure></li>
-</ol>
+<p>最后访问自己的网站;</p>
 
     </main>
     <footer class="post-footer">
       
       <div class="post-tags">
         
+        <a class="post-tag button" href="/tags/服务器/" rel="tag"><i class="fas fa-tags"></i>服务器</a>
+        
+        <a class="post-tag button" href="/tags/LNMP/" rel="tag"><i class="fas fa-tags"></i>LNMP</a>
+        
         <a class="post-tag button" href="/tags/笔记/" rel="tag"><i class="fas fa-tags"></i>笔记</a>
-        
-        <a class="post-tag button" href="/tags/python/" rel="tag"><i class="fas fa-tags"></i>python</a>
-        
-        <a class="post-tag button" href="/tags/爬虫/" rel="tag"><i class="fas fa-tags"></i>爬虫</a>
         
       </div>
       
@@ -219,12 +202,10 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2018/12/12/requests/" rel="next" title="requests"><i class="fas fa-angle-left"></i><span class="nav-title">requests</span></a>
+      <a href="/2018/12/17/BeautifuSoup/" rel="next" title="BeautifuSoup"><i class="fas fa-angle-left"></i><span class="nav-title">BeautifuSoup</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
-      
-      <a href="/2018/12/17/BeautifuSoup/" rel="prev" title="BeautifuSoup"><span class="nav-title">BeautifuSoup</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -251,7 +232,7 @@
       "client_secret": "d01fdda69c2e923e8ea2b805b6d1dbcbfa08ea27",
       "no_comment": "这个页面还没有评论，现在就去评论吧！",
       "go_to_comment": "去评论",
-      "issue_title": "xpath",
+      "issue_title": "阿里云服务器SSL证书",
       "btn_class": "button",
       "comments_target": "#comment-thread"
     });
@@ -344,7 +325,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#xpath语法"><span class="toc-text">xpath语法</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#使用方式："><span class="toc-text">使用方式：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#需要注意的是："><span class="toc-text">需要注意的是：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#使用lxml解析HEML代码："><span class="toc-text">使用lxml解析HEML代码：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#lxml结合xpath注意事项："><span class="toc-text">lxml结合xpath注意事项：</span></a></li></ol></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#阿里云LNMP服务器SSL证书"><span class="toc-text">阿里云LNMP服务器SSL证书</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#SSL证书的使用："><span class="toc-text">SSL证书的使用：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#Nginx配置："><span class="toc-text">Nginx配置：</span></a></li></ol></li></ol></div>
     </div>
     
     
