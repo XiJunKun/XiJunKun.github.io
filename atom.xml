@@ -42,11 +42,11 @@
       <category term="笔记" scheme="http://yoursite.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/LNMP/%E7%AC%94%E8%AE%B0/"/>
     
     
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
       <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
       <category term="LNMP" scheme="http://yoursite.com/tags/LNMP/"/>
-    
-      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -76,11 +76,11 @@
       <category term="笔记" scheme="http://yoursite.com/categories/python/%E7%88%AC%E8%99%AB/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
       <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -110,11 +110,11 @@
       <category term="笔记" scheme="http://yoursite.com/categories/python/%E7%88%AC%E8%99%AB/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
       <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -144,11 +144,11 @@
       <category term="笔记" scheme="http://yoursite.com/categories/python/%E7%88%AC%E8%99%AB/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
       <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -178,11 +178,11 @@
       <category term="笔记" scheme="http://yoursite.com/categories/python/%E7%88%AC%E8%99%AB/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
       <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
